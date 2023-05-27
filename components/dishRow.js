@@ -2,7 +2,7 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native";
 import { themeColors } from "../theme";
-import * as Icon from "react-native-feather";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 const DishRow = ({ item }) => {
   item = item?.attributes;
   return (
@@ -25,24 +25,14 @@ const DishRow = ({ item }) => {
               className="p-1 rounded-full"
               style={{ backgroundColor: themeColors.bgColor(1) }}
             >
-              <Icon.Minus
-                strokeWidth={2}
-                height={20}
-                width={20}
-                stroke={"white"}
-              />
+              <MaterialCommunityIcons name="minus" size={20} color="white" />
             </TouchableOpacity>
             <Text className="px-3">{2}</Text>
             <TouchableOpacity
               className="p-1 rounded-full"
               style={{ backgroundColor: themeColors.bgColor(1) }}
             >
-              <Icon.Plus
-                strokeWidth={2}
-                height={20}
-                width={20}
-                stroke={"white"}
-              />
+              <MaterialCommunityIcons name="plus" size={20} color="white" />
             </TouchableOpacity>
           </View>
         </View>

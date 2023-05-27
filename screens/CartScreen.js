@@ -9,9 +9,8 @@ import {
 import React from "react";
 import { featured } from "../constants";
 import { themeColors } from "../theme";
-import * as Icon from "react-native-feather";
 import { useNavigation } from "@react-navigation/native";
-
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 const CartScreen = () => {
   const restaurant = featured.restaurants[0].dishes;
   const navigation = useNavigation();
@@ -27,7 +26,7 @@ const CartScreen = () => {
           }}
           className="absolute z-10 rounded-full p-1 shadow top-5 left-2"
         >
-          <Icon.ArrowLeft strokeWidth={3} stroke={"white"} />
+          <MaterialCommunityIcons name="arrow-left" size={25} color="white" />
         </TouchableOpacity>
       </View>
       <View>
@@ -78,12 +77,7 @@ const CartScreen = () => {
                 className="p-1 rounded-full"
                 style={{ backgroundColor: themeColors.bgColor(1) }}
               >
-                <Icon.Minus
-                  strokeWidth={2}
-                  height={20}
-                  width={20}
-                  stroke={"white"}
-                />
+                <MaterialCommunityIcons name="minus" size={20} color="white" />
               </TouchableOpacity>
             </View>
           );

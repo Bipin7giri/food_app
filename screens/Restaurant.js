@@ -1,10 +1,11 @@
 import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import * as Icon from "react-native-feather";
 import { themeColors } from "../theme";
 import DishRow from "../components/dishRow";
 import CartIcons from "../components/cartIcons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
 import { StatusBar } from "expo-status-bar";
 const Resturant = () => {
   const { params } = useRoute();
@@ -29,7 +30,11 @@ const Resturant = () => {
             }}
             className="absolute top-8 left-2 bg-gray-50 p-2 rounded-full shadow"
           >
-            <Icon.ArrowLeft strokeWidth={3} stroke={themeColors.bgColor(1)} />
+            <MaterialCommunityIcons
+              name="arrow-left"
+              size={25}
+              color={themeColors.bgColor(1)}
+            />
           </TouchableOpacity>
         </View>
         <View
@@ -51,7 +56,11 @@ const Resturant = () => {
                 </Text>
               </View>
               <View className="flex-row items-center space-x-1">
-                <Icon.MapPin color="gray" width="15" height="15" />
+                <MaterialCommunityIcons
+                  name="map-marker"
+                  size={15}
+                  color="gray"
+                />
                 <Text className="text-gray-700 text-xs">
                   Nearby. {restaurant.address}
                 </Text>

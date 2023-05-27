@@ -6,9 +6,9 @@ import {
   Image,
 } from "react-native";
 import React from "react";
-import * as Icon from "react-native-feather";
 import { themeColors } from "../theme";
 import { useNavigation } from "@react-navigation/native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 const RestaurantCard = ({ item }) => {
   const navigation = useNavigation();
   item = item.attributes;
@@ -43,7 +43,9 @@ const RestaurantCard = ({ item }) => {
             </Text>
           </View>
           <View className="flex-row items-center space-x-1">
-            <Icon.MapPin color="gray" width="15" height="15" />
+            {/* <Icon.MapPin color="gray" width="15" height="15" /> */}
+            <MaterialCommunityIcons name="map-marker" size={15} color="gray" />
+
             <Text className="text-gray-700 text-xs">
               Nearby. {item.address}
             </Text>
